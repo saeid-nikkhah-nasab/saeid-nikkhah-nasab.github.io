@@ -9,6 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.clipartmax.com/png/full/275-2750441_resume-icons-curriculum-vitae.png" type="image/x-icon">
     <style>
         :root {
             /* Light Mode Colors */
@@ -614,6 +615,15 @@
             let touchStartY = 0;
             let isScrollingPublications = false;
             let publicationsScroll = document.getElementById('publications-scroll');
-            
+        
             // Set current year in footer
-            
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+            // Initialize sections
+            function initSections() {
+                sections.forEach((section, index) => {
+                    if (index === 0) {
+                        section.classList.add('active');
+                        section.classList.remove('inactive');
+                    } else {
+                        section.classList.add('inactive');

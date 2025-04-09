@@ -607,3 +607,13 @@
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('.section');
             const dots = document.querySelectorAll('.dot');
+            const backToTopBtn = document.querySelector('.back-to-top');
+            const darkModeToggle = document.querySelector('.dark-mode-toggle');
+            let currentSection = 0;
+            let isAnimating = false;
+            let touchStartY = 0;
+            let isScrollingPublications = false;
+            let publicationsScroll = document.getElementById('publications-scroll');
+            
+            // Set current year in footer
+            
